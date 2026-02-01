@@ -2,35 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Gallery | ACHMC&H</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Gallery - ACHMC&H</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #004d40; color: white; padding: 1.5rem; text-align: center; }
+        nav { background: #00695c; padding: 0.5rem; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-item p {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+
+<header>
+    <h1>ACHMC&H Photo Gallery</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-<section class="gallery">
-    <div class="container">
-        <h2>Gallery</h2>
-        <div class="grid">
-            <img src="assets/campus1.jpg" alt="Campus">
-            <img src="assets/campus2.jpg" alt="Labs">
-            <img src="assets/events1.jpg" alt="Events">
-        </div>
+<div class="gallery-container">
+    <div class="gallery-item">
+        <img src="college-front.jpg" alt="College Building">
+        <p>Main College Building</p>
     </div>
-</section>
+
+    <div class="gallery-item">
+        <img src="hospital.jpg" alt="Hospital Ward">
+        <p>Our Hospital Ward</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="garden.jpg" alt="Herbal Garden">
+        <p>Medicinal Herbal Garden</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="classroom.jpg" alt="Classroom">
+        <p>Lecture Theater</p>
+    </div>
+</div>
 
 <footer>
-    <div class="container">
-        <p>© 2026 ACHMC&H — All Rights Reserved</p>
-    </div>
+    <p>&copy; 2026 ACHMC&H Student Project</p>
 </footer>
+
 </body>
 </html>
